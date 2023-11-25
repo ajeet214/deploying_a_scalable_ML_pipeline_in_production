@@ -8,10 +8,10 @@ endpoint that accepts input data, performs model inference, and returns the pred
 The application uses Pydantic models for input validation and Hydra for configuration management.
 """
 from typing import Dict
-import pickle
 import pandas as pd
-from fastapi import FastAPI
+import pickle
 from pydantic import BaseModel, Field
+from fastapi import FastAPI
 import hydra
 
 from module.data import process_data
