@@ -11,6 +11,7 @@ import sys
 import pytest
 from fastapi.testclient import TestClient
 
+
 try:
     from main import app
 except ModuleNotFoundError:
