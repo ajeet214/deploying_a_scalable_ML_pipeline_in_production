@@ -1,7 +1,8 @@
 """
 train_model.py
 
-This script trains a machine learning model and saves it. It uses data processing and model-related functions
+This script trains a machine learning model and saves it.
+It uses data processing and model-related functions
 from the 'module.data' and 'module.model' modules.
 
 Usage:

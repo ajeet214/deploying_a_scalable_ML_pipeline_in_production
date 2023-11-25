@@ -10,7 +10,8 @@ Usage:
 - Call the process_data function with appropriate parameters to preprocess your data.
 
 Note:
-- Depending on the type of model used, additional functionality may be needed for scaling continuous data.
+- Depending on the type of model used, additional functionality may be needed for scaling
+continuous data.
 
 Author:
 Ajeet Kumar Verma

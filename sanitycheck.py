@@ -6,10 +6,10 @@ This script runs a sanity check on the test cases for the GET() and POST() metho
 Author:
 Ajeet Kumar Verma
 """
-import os
+# import os
 import sys
 from os import path
-import argparse
+# import argparse
 import importlib
 import inspect
 import logging
@@ -28,9 +28,11 @@ def run_sanity_check():
     Script to run a sanity check on the test cases for the GET() and POST() methods
     """
     logger.info(
-        'This script will perform a sanity test to ensure your code meets the criteria in the rubric.\n')
+        'This script will perform a sanity test to ensure your code \
+        meets the criteria in the rubric.\n')
     logger.info(
-        'Please enter the path to the file that contains your test cases for the GET() and POST() methods')
+        'Please enter the path to the file that contains your test cases \
+        for the GET() and POST() methods')
     logger.info('The path should be something like abc/def/test_xyz.py')
     filepath = input('> ')
 
@@ -85,7 +87,8 @@ def run_sanity_check():
             WARNING_COUNT += 1
             print(
                 FAIL_COLOR +
-                "Your test case for GET() does not seem to be testing the CONTENTS of the response.\n")
+                "Your test case for GET() does not seem to be testing the \
+                CONTENTS of the response.\n")
 
     # POST()
     TEST_FOR_POST_METHOD_RESPONSE_CODE = False
@@ -100,7 +103,8 @@ def run_sanity_check():
         logger.info(
             FAIL_COLOR +
             "Please make sure you have TWO test cases for the POST() method." +
-            "\nOne test case for EACH of the possible inferences (results/outputs) of the ML model.\n")
+            "\nOne test case for EACH of the possible inferences \
+            (results/outputs) of the ML model.\n")
         SANITY_TEST_PASSING = False
     else:
         if len(test_functions_for_post) == 1:
@@ -112,7 +116,8 @@ def run_sanity_check():
             logger.info(
                 FAIL_COLOR +
                 "Please make sure you have two test cases for the POST() method." +
-                "\nOne test case for EACH of the possible inferences (results/outputs) of the ML model.\n")
+                "\nOne test case for EACH of the possible inferences (results/outputs)\
+                 of the ML model.\n")
             SANITY_TEST_PASSING = False
 
         for func in test_functions_for_post:
@@ -128,13 +133,15 @@ def run_sanity_check():
             WARNING_COUNT += 1
             logger.info(
                 FAIL_COLOR +
-                "One or more of your test cases for POST() do not seem to be testing the response code.\n")
+                "One or more of your test cases for POST() do not seem to \
+                be testing the response code.\n")
         if not TEST_FOR_POST_METHOD_RESPONSE_BODY:
             logger.info(FAIL_COLOR + f"[{WARNING_COUNT}]")
             WARNING_COUNT += 1
             logger.info(
                 FAIL_COLOR +
-                "One or more of your test cases for POST() do not seem to be testing the contents of the response.\n")
+                "One or more of your test cases for POST() do not seem to be \
+                testing the contents of the response.\n")
 
         if len(
                 test_functions_for_post) >= 2 and COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT < 2:
@@ -142,7 +149,8 @@ def run_sanity_check():
             WARNING_COUNT += 1
             logger.info(
                 FAIL_COLOR +
-                "You do not seem to have TWO separate test cases, one for each possible prediction that your model can make.")
+                "You do not seem to have TWO separate test cases, one for each \
+                possible prediction that your model can make.")
 
     SANITY_TEST_PASSING = SANITY_TEST_PASSING and\
         TEST_FOR_GET_METHOD_RESPONSE_CODE and \
@@ -156,10 +164,12 @@ def run_sanity_check():
 
     logger.info(
         WARN_COLOR +
-        "This is a heuristic based sanity testing and cannot guarantee the correctness of your code.")
+        "This is a heuristic based sanity testing and cannot \
+        guarantee the correctness of your code.")
     logger.info(
         WARN_COLOR +
-        "You should still check your work against the rubric to ensure you meet the criteria.")
+        "You should still check your work against the rubric to \
+        ensure you meet the criteria.")
 
 
 if __name__ == "__main__":
