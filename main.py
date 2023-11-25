@@ -94,7 +94,7 @@ async def prediction(input_data: CensusInputData) -> Dict[str, str]:
 
     # Convert input data to DataFrame
     input_df = pd.DataFrame(
-        {k: v for k, v in input_data.dict(by_alias=True).items()}, index=[0]
+        {k: v for k, v in input_data.model_dump(by_alias=True).items()}, index=[0]
     )
 
     # Process input data for model inference
