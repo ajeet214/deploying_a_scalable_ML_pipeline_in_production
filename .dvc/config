@@ -1,0 +1,6 @@
+[core]
+    remote = localremote
+['remote "deploying_a_scalable_ml_pipeline_in_production"']
+    url = https://github.com/ajeet214/deploying_a_scalable_ml_pipeline_in_production
+['remote "localremote"']
+    url = ../../local_remote
