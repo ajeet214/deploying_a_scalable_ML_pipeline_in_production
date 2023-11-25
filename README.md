@@ -1,3 +1,9 @@
+Github Project repo: https://github.com/ajeet214/deploying_a_scalable_ml_pipeline_in_production
+Continuous Integration(CI) using GitHub Action.
+Continuous Deployment(CD) using render.com:
+GET: https://ajeet214-deploy-ml-pipeline.onrender.com/
+POST: https://ajeet214-deploy-ml-pipeline.onrender.com/infer along with the data.
+
 Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
 
 # Environment Set up
