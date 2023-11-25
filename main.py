@@ -63,6 +63,7 @@ class CensusInputData(BaseModel):
         }
     }
 
+
 # Define the root endpoint with a welcome message
 @app.get(path="/")
 def welcome_root():
@@ -70,6 +71,7 @@ def welcome_root():
     Welcome message at the root endpoint.
     """
     return {"message": "Welcome to the project!"}
+
 
 # Define the /infer endpoint for model inference
 @app.post(path="/infer")
