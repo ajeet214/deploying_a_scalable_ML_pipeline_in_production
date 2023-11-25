@@ -6,3 +6,6 @@ requests
 fastapi
 uvicorn
 gunicorn
+httpx
+hydra-core
+flake8
