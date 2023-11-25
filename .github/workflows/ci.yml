@@ -25,6 +25,7 @@ jobs:
         pip install -r requirements.txt
         pip install flake8 pytest
         pip install hydra-core
+        pip install httpx
 
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
