@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout the code
       uses: actions/checkout@v2
 
-    - name: Set up Python
+    - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
@@ -27,11 +27,14 @@ jobs:
 
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
-    - name: Pull data from DVC
-      run: dvc pull -f
 
     - name: Run Flake8
       run: |
         flake8 --max-line-length 99
+
     - name: Run pytest
       run: pytest
+
+    - name: Complete Job
+      run: |
+        echo "Checking if all steps ran successfully"
