@@ -7,7 +7,7 @@ Author:
 Ajeet Kumar Verma
 """
 import sys
-import json
+# import json
 import pytest
 from fastapi.testclient import TestClient
 
