@@ -1,3 +1,11 @@
+"""
+sanitycheck.py
+
+This script runs a sanity check on the test cases for the GET() and POST() methods.
+
+Author:
+Ajeet Kumar Verma
+"""
 import os
 import sys
 from os import path
@@ -18,9 +26,6 @@ WARN_COLOR = '\033[93m'
 def run_sanity_check():
     """
     Script to run a sanity check on the test cases for the GET() and POST() methods
-
-    Args:
-        test_dir (str): Path to the directory that has the test files
     """
     logger.info(
         'This script will perform a sanity test to ensure your code meets the criteria in the rubric.\n')
